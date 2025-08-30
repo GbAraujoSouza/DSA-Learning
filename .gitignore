@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Java (Maven/Gradle)
+target/
+.idea/
+*.class
+build/
+
+# Go
+*.exe
+*.out
+
+# OS-specific
+.DS_Store
+Thumbs.db
