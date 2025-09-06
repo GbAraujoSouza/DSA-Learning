@@ -3,7 +3,7 @@ import java.util.List;
 
 
 public class TreeSearch {
-    private List<Integer> preOrderWalk(BinaryNode<Integer> curr, List<Integer> path) {
+    public List<Integer> preOrderWalk(BinaryNode<Integer> curr, List<Integer> path) {
         if (curr == null) {
             return path;
         }
@@ -19,19 +19,19 @@ public class TreeSearch {
             return path;
         }
 
-        preOrderWalk(curr.left, path);
+        inOrderWalk(curr.left, path);
         path.add(curr.value);
-        preOrderWalk(curr.right, path);
+        inOrderWalk(curr.right, path);
 
         return path;
     }
-    private List<Integer> posOrderWalk(BinaryNode<Integer> curr, List<Integer> path) {
+    public List<Integer> posOrderWalk(BinaryNode<Integer> curr, List<Integer> path) {
         if (curr == null) {
             return path;
         }
 
-        preOrderWalk(curr.left, path);
-        preOrderWalk(curr.right, path);
+        posOrderWalk(curr.left, path);
+        posOrderWalk(curr.right, path);
         path.add(curr.value);
 
         return path;
